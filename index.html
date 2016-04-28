@@ -12,16 +12,20 @@
     <div id="header">
         <span id="name" class="content">Scott Beeson</span>
     </div>
+    <div id="ribbonghost"></div>
     <div id="ribbon">
         <span id="menuTop" class="content">
-            <span class="menuItem selected">About</span>
-            <span class="menuItem">Skills</span>
-            <span class="menuItem">Experience</span>
-            <span class="menuItem">References</span>
+            <span class="menuItem selected" data-target="about">About</span>
+            <span class="menuItem" data-target="skills">Skills</span>
+            <span class="menuItem" data-target="experience">Experience</span>
+            <span class="menuItem" data-target="references">References</span>
         </span>
     </div>
     <div id="body">
-        <span id="something" class="content">This is a test</span>
+        <span id="about" class="content page selected">This is the about page.</span>
+        <span id="skills" class="content page">This is the skills page.</span>
+        <span id="experience" class="content page">This is the experience page.</span>
+        <span id="references" class="content page">This is the references page.</span>
     </div>
 </body>
 </html>

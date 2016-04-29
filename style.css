@@ -78,19 +78,20 @@ html,body{
 .page {
     z-index: -10;
     background-color: rgba(230,230,230,.8);
-    top: -50px;
+    top: -100px;
+    bottom: 150px;
     opacity: 0;
-    -webkit-transition: top 1s ease, opacity .5s ease;
-    -moz-transition: top 1s ease, opacity .5s ease;
-    -o-transition: top 1s ease, opacity .5s ease;
-    -ms-transition: top 1s ease, opacity .5s ease;
+    -webkit-transition: top 1s ease, bottom 1s ease, opacity .5s ease;
+    -moz-transition: top 1s ease, bottom 1s ease, opacity .5s ease;
+    -o-transition: top 1s ease, bottom 1s ease, opacity .5s ease;
+    -ms-transition: top 1s ease, bottom 1s ease, opacity .5s ease;
     -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
     padding: 10px;
 }
 .page.selected {
-    top: 0;
+    top: 0;bottom: 50px;
     opacity:1;
 }
 

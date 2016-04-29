@@ -69,17 +69,35 @@ html,body{
 .menuItem.selected {
     height: 30px;
 }
+
 .content {
     position: absolute;
     width: 1000px;
     left: 50%;
     margin-left: -500px;
 }
+
+
+@media only screen and (max-width: 1250px) {
+    .content {
+        width: 800px;
+        margin-left: -400px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .content {
+        width: 500px;
+        margin-left: -250px;
+    }
+}
+
+
 .page {
     z-index: -10;
     background-color: rgba(230,230,230,.8);
-    top: -100px;
-    bottom: 150px;
+    top: -50px;
+    bottom: 100px;
     opacity: 0;
     -webkit-transition: top 1s ease, bottom 1s ease, opacity .5s ease;
     -moz-transition: top 1s ease, bottom 1s ease, opacity .5s ease;
@@ -89,6 +107,7 @@ html,body{
     -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
     padding: 10px;
+    border: 1px solid deepskyblue;
 }
 .page.selected {
     top: 0;bottom: 50px;

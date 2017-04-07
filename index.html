@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Scott Beeson</title>
-    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="jquery.transit.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
-        <span id="name" class="content">Scott Beeson</span>
-    </div>
-    <div id="ribbonghost"></div>
-    <div id="ribbon">
-        <span id="menuTop" class="content">
-            <span class="menuItem selected" data-target="about">About</span>
-            <span class="menuItem" data-target="skills">Skills</span>
-            <span class="menuItem" data-target="experience">Experience</span>
-            <span class="menuItem" data-target="references">References</span>
-        </span>
-    </div>
-    <div id="body">
-        <span id="about" class="content page selected">This is the about page.</span>
-        <span id="skills" class="content page">This is the skills page.</span>
-        <span id="experience" class="content page">This is the experience page.</span>
-        <span id="references" class="content page">This is the references page.</span>
-    </div>
+    <div id="c1" class="customcursor"></div>
+    <div id="c2" class="customcursor"></div>
+    <span id="area1" class="area">
+        <div id="menu1" class="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div id="menu1-home" class="menu menu-item"><i class="fa fa-home" aria-hidden="true"></i></div>
+        <div id="menu1-film" class="menu menu-item"><i class="fa fa-film" aria-hidden="true"></i></div>
+        <div id="menu1-heart" class="menu menu-item"><i class="fa fa-heart" aria-hidden="true"></i></div>
+        <div id="menu1-gears" class="menu menu-item"><i class="fa fa-gears" aria-hidden="true"></i></div>
+    </span><!--
+    --><span id="area2" class="area">
+        <div id="menu2" class="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div id="menu2-home" class="menu menu2-item menu-item"><i class="fa fa-home" aria-hidden="true"></i></div>
+        <div id="menu2-film" class="menu menu2-item menu-item"><i class="fa fa-film" aria-hidden="true"></i></div>
+        <div id="menu2-heart" class="menu menu2-item menu-item"><i class="fa fa-heart" aria-hidden="true"></i></div>
+        <div id="menu2-gears" class="menu menu2-item menu-item"><i class="fa fa-gears" aria-hidden="true"></i></div>
+    </span>
 </body>
 </html>

@@ -1,0 +1,98 @@
+body,html {
+	height: 100%;
+	padding: 25px; margin: 0;
+	box-sizing: border-box;
+}
+
+#menu1 {
+	border-radius: 50%;
+	background-color: #444;
+	color: white;
+}
+#menu2 {
+	background-color: #bbb;
+}
+.menu {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 50%;
+	top: 50%;
+	margin-left: -25px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 10;
+}
+
+#area1 .menu-item {
+	border-radius: 50%;
+	background-color: #666;
+}
+#area2 .menu-item {
+	background-color: #999;
+}
+.menu-item {
+	z-index: 5;
+	height: 50px;
+	width: 50px;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+
+.area {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	border: 3px dashed #CCCCCC;
+	background: #FFFFFF;
+	padding: 5px;
+	cursor: none;
+	box-sizing: border-box;
+	width: 50%;
+	z-index: 1;
+}
+
+
+#area1 { background: #eee;}
+#area2 { background: #222;}
+
+#c1 { background: #222; border-radius: 50%;}
+#c2 { background: #eee;}
+
+.customcursor {
+	pointer-events: none;
+	cursor: none;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+}
+
+.flippedx {
+	transform: scale(-1, 1);
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+}
+
+.flippedy {
+	transform: scale(1, -1);
+	-moz-transform: scale(1, -1);
+	-webkit-transform: scale(1, -1);
+	-o-transform: scale(1, -1);
+	-ms-transform: scale(1, -1);
+}
+
+.flippedxy {
+	transform: scale(-1, -1);
+	-moz-transform: scale(-1, -1);
+	-webkit-transform: scale(-1, -1);
+	-o-transform: scale(-1, -1);
+	-ms-transform: scale(-1, -1);
+}

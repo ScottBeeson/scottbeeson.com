@@ -20,13 +20,50 @@ html {
   left: 50%;
   top: 50%;
   margin-left: -25px;
+  margin-top: -25px;
   text-align: center;
   line-height: 50px;
   z-index: 10;
 }
+#menu1-container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  text-align: center;
+  transform: scale(0.25);
+}
 #area1 .menu-item {
   border-radius: 50%;
   background-color: #666;
+  display: none;
+}
+#menu1-home {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+}
+#menu1-heart {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -25px;
+}
+#menu1-film {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  margin-top: -25px;
+}
+#menu1-gears {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  margin-top: -25px;
 }
 #area2 .menu-item {
   background-color: #999;
@@ -35,9 +72,6 @@ html {
   z-index: 5;
   height: 50px;
   width: 50px;
-}
-.menu-item:hover {
-  transform: scale(1.1);
 }
 .area {
   position: relative;

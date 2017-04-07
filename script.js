@@ -4,25 +4,29 @@
 
 function openMenu1() {
     isOpen1 = true;
+    $('#menu1-container').transition({scale: 1, rotate: '0deg'});
+    $('#menu1-container .menu-item').fadeIn();
     //$('#menu1-home').fadeIn({queue: false, duration:'slow'}).animate({top: '-=55px'})
-    $('#menu1-home').animate({top: '-=55px'}, 'fast', function() {
+/*    $('#menu1-home').animate({top: '-=55px'}, 'fast', function() {
         $('#menu1-film').animate({left: '+=55px'}, 'fast', function() {
             $('#menu1-heart').animate({top: '+=55px'}, 'fast', function() {
                 $('#menu1-gears').animate({left: '-=55px'}, 'fast')
             })
         })
-    })
+    })*/
 }
 
 function closeMenu1() {
     isOpen1 = false;
-    $('#menu1-home').animate({top: '50%', left: '50%'}, 'fast', function() {
+    $('#menu1-container').transition({scale: .25, rotate: '-90deg'});
+    $('#menu1-container .menu-item').fadeOut();
+/*    $('#menu1-home').animate({top: '50%', left: '50%'}, 'fast', function() {
         $('#menu1-film').animate({top: '50%', left: '50%'}, 'fast', function() {
             $('#menu1-heart').animate({top: '50%', left: '50%'}, 'fast', function() {
                 $('#menu1-gears').animate({top: '50%', left: '50%'}, 'fast')
             })
         })
-    })
+    })*/
 }
 
 function openMenu2() {
@@ -91,6 +95,7 @@ $(document).ready(function(){
     $('#menu2-film').transition({rotateX: '-180deg'});
     $('#menu2-heart').transition({rotateX: '-180deg'});
     $('#menu2-gears').transition({rotateX: '-180deg'});
+    $('#menu1-container').transition({scale: .25, rotate: '-90deg'});
 
 
     $('#area1').mouseleave(function(){
@@ -124,12 +129,14 @@ $(document).on('mouseover','#menu2',function() {
 });
 
 $(document).on('mouseover','.menu-item',function() {
+    $(this).transition({scale: 1.1,queue: false});
     $('.customcursor').css({
         'opacity':.5,
         'width':'15px',
         'height':'15px'
     });
 }).on('mouseout','.menu-item',function() {
+    $(this).transition({scale: 1,queue: false});
     $('.customcursor').css({
         'opacity':1,
         'width':'12px',

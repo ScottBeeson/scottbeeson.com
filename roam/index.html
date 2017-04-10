@@ -13,7 +13,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="section red">
+    <div id="header-section" class="section red">
         <div class="header content">
             <a href="#">HOME</a>
             <a href="#">TECH TIMELINE</a>
@@ -23,7 +23,7 @@
             <a href="#">CONTACT</a>
         </div>
     </div>
-    <div id="parallax1" class="section parallax-window" data-parallax="scroll" data-image-src="images/p1.png">
+    <div class="section parallax-window" data-parallax="scroll" data-image-src="images/p1.png">
         <div class="content one">
             <img id="main-image" src="images/roam-logo.png">
             <hr>
@@ -35,6 +35,41 @@
         <div class="content two">
             <div class="title">TECH TIMELINE</div>
             <hr>
+            <table id="timeline-table">
+                <tr>
+                    <td>80's</td>
+                    <td rowspan="3">⟶</td>
+                    <td>90's</td>
+                    <td rowspan="3">⟶</td>
+                    <td>00's</td>
+                </tr>
+                <tr>
+                    <td><img src="images/t1.png"></td>
+                    <td><img src="images/t2.png"></td>
+                    <td><img src="images/t3.png"></td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>WWW</td>
+                    <td>MOBILE</td>
+                </tr>
+            </table>
+            <img src="images/tsep.png">
+        </div>
+    </div>
+    <div class="section parallax-window" data-parallax="scroll" data-image-src="images/p2.png">
+        <div class="content three">
+            <img src="images/tsep2.png">
+            <div class="title">TODAY</div>
+            <hr>
+            <div class="subtitle">AUGMENTED, MIXED & VIRTUAL REALITY</div>
+            <p>AR and VR technologies are changing the way we interact with products, information and services.</p>
+            <p>Roam delivers the tools and services you need to make the transition to a 3D web presence simple, affordable and effective.</p>
+        </div>
+    </div>
+    <div class="section black">
+        <div class="content four">
+
         </div>
     </div>
 </body>

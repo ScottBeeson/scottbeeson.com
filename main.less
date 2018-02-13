@@ -1,11 +1,22 @@
+
+@bgcolor1: #f3f3f3;
+@bgcolor2: #e7e7e7;
+@textPadding: 15px;
+@textcolor1: #080808;
+@textcolor2: #082858;
+@chartcolor1: #fff;
+@chartcolor2: #21ff7c;
+@charttextcolor: black;
+
 body, html {
 	padding: 0; margin: 0;
 	background-color: black;
 	font-size: 15px;
 	line-height: 15px;
+	font-family: Calibri, serif;
+	-webkit-print-color-adjust: exact;
 }
 
-@textFromCenter: 30px;
 div {
 	box-sizing: border-box;
 }
@@ -16,24 +27,90 @@ div {
 	width: 8.5in;
 	left: 50%;
 	margin-left: -4.25in;
-	height: 11in;
+	height: 10in;
 	top: 0;
-	background-color: #f3f3f3;
+	background-color: @bgcolor1 !important;
 	@media print {
 		background-color: white;
 	}
-	color: #080808;
+	color: @textcolor1;
 	.content-left {
 		position: absolute;
 		top: 0; bottom:0;
 		left: 0; width: 33%;
 		display: inline-block;
 		text-align: right;
+		.section {
+			padding-right: @textPadding;
+			padding-left: 0;
+			>div {
+				background-color: @bgcolor2 !important;
+			}
+		}
 		#contact-info {
 			position: absolute;
-			right: @textFromCenter;
 			top: 50%;
-			margin-top: -22px;
+			margin-top: -20px;
+			line-height: 20px;
+			right: @textPadding * 2;
+			padding-top: 3px;
+			color: @textcolor2;
+		}
+		.employment-entry {
+			.empIcon {
+				float: right;
+				height: 30px; width: 30px;
+				img { height: 100%; width: 100%;}
+			}
+			>div {
+				padding-right: 35px;
+			}
+			.empName { }
+		}
+		.tech-entries {
+			&.traits {
+				font-size: 10px;
+			}
+			padding-left: @textPadding * 2;
+			.tech-entry {
+				position: relative;
+				padding-bottom: 2px;
+				.label {
+					position: relative;
+					width: 75px;
+					background-color: rgba(255,255,255,.9);
+					border-right: 1px solid gray;
+					text-align: left;
+					padding-left: 2px;
+					z-index: 5;
+					height: 15px;
+					color: @charttextcolor;
+				}
+				.barbg, .bar {
+					position: absolute;
+					left: 0; top: 0;
+					height: 15px;
+				}
+				.barbg {
+					background-color: @chartcolor1 !important;
+					width: 100%;
+				}
+				.bar {
+					background-color: @chartcolor2 !important;
+					z-index: 4;
+				}
+			}
+		}
+		.tech-entries-no-graph {
+			width: 100%;
+			text-align: justify;
+			padding-left: @textPadding * 2;
+			>div {
+				display: inline;
+				&:not(:last-child):after {
+					content: ",";
+				}
+			}
 		}
 	}
 	.content-right {
@@ -41,36 +118,56 @@ div {
 		top: 0; bottom:0;
 		left: 33%; right: 0;
 		display: inline-block;
-		background-color: rgba(0,0,0,.15);
+		background-color: @bgcolor2;
 		text-align: left;
+		.section {
+			padding-right: 0;
+			padding-left: @textPadding;
+			div {
+				background-color: @bgcolor1;
+				padding-right: @textPadding * 2;
+			}
+		}
 		#name-container {
 			position: absolute;
-			height: 45px;
-			left: @textFromCenter;
 			top: 50%;
-			margin-top: -22px;
+			margin-top: -20px;
+			height: 60px;
+			left: @textPadding * 2;
 			text-transform: uppercase;
 			#full-name {
-				font-size: 30px;
-				line-height: 30px;
+				font-size: 40px;
+				line-height: 40px;
 				font-weight: bold;
+				color: @textcolor2;
 			}
 			#tag-line {
-
+				font-size: 20px;
+				line-height: 20px;
+				color: dimgray;
 			}
 		}
 	}
 
-	.header {
-		height: 150px;
+	.page-header {
+		height: 120px;
 		position: relative;
 	}
-	/*
 	.section {
-		margin: 15px;
-		&.first {
-			margin-top: 25px;
-			border-bottom: 1px solid gray;
+		width: 100%;
+		padding-top: @textPadding;
+		padding-bottom: 0;
+		.header {
+			color: @textcolor2;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding-bottom: @textPadding;
+			padding-top: @textPadding;
 		}
-	}*/
+		>div {
+			padding-right: @textPadding;
+			padding-left: @textPadding;
+			padding-bottom: @textPadding;
+		}
+	}
 }

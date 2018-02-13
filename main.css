@@ -1,5 +1,77 @@
 body,
 html {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-size: 15px;
+  line-height: 15px;
+}
+div {
+  box-sizing: border-box;
+}
+#content-container {
+  box-sizing: border-box;
+  position: absolute;
+  width: 8.5in;
+  left: 50%;
+  margin-left: -4.25in;
+  height: 11in;
+  top: 0;
+  background-color: #f3f3f3;
+  color: #080808;
+  /*
+	.section {
+		margin: 15px;
+		&.first {
+			margin-top: 25px;
+			border-bottom: 1px solid gray;
+		}
+	}*/
+}
+@media print {
+  #content-container {
+    background-color: white;
+  }
+}
+#content-container .content-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 33%;
+  display: inline-block;
+  text-align: right;
+}
+#content-container .content-left #contact-info {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  margin-top: -22px;
+}
+#content-container .content-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+#content-container .content-right #name-container {
+  position: absolute;
+  height: 45px;
+  left: 30px;
+  top: 50%;
+  margin-top: -22px;
+  text-transform: uppercase;
+}
+#content-container .content-right #name-container #full-name {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+#content-container .header {
+  height: 150px;
+  position: relative;
 }

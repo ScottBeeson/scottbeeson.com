@@ -1,0 +1,76 @@
+body, html {
+	padding: 0; margin: 0;
+	background-color: black;
+	font-size: 15px;
+	line-height: 15px;
+}
+
+@textFromCenter: 30px;
+div {
+	box-sizing: border-box;
+}
+
+#content-container {
+	box-sizing:border-box;
+	position: absolute;
+	width: 8.5in;
+	left: 50%;
+	margin-left: -4.25in;
+	height: 11in;
+	top: 0;
+	background-color: #f3f3f3;
+	@media print {
+		background-color: white;
+	}
+	color: #080808;
+	.content-left {
+		position: absolute;
+		top: 0; bottom:0;
+		left: 0; width: 33%;
+		display: inline-block;
+		text-align: right;
+		#contact-info {
+			position: absolute;
+			right: @textFromCenter;
+			top: 50%;
+			margin-top: -22px;
+		}
+	}
+	.content-right {
+		position: absolute;
+		top: 0; bottom:0;
+		left: 33%; right: 0;
+		display: inline-block;
+		background-color: rgba(0,0,0,.15);
+		text-align: left;
+		#name-container {
+			position: absolute;
+			height: 45px;
+			left: @textFromCenter;
+			top: 50%;
+			margin-top: -22px;
+			text-transform: uppercase;
+			#full-name {
+				font-size: 30px;
+				line-height: 30px;
+				font-weight: bold;
+			}
+			#tag-line {
+
+			}
+		}
+	}
+
+	.header {
+		height: 150px;
+		position: relative;
+	}
+	/*
+	.section {
+		margin: 15px;
+		&.first {
+			margin-top: 25px;
+			border-bottom: 1px solid gray;
+		}
+	}*/
+}

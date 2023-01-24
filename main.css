@@ -2,170 +2,34 @@ body,
 html {
   padding: 0;
   margin: 0;
-  background-color: black;
+  background-color: #323232;
   font-size: 15px;
   line-height: 15px;
   font-family: Calibri, serif;
   -webkit-print-color-adjust: exact;
 }
-div {
-  box-sizing: border-box;
+@media print {
+  body,
+  html {
+    background-color: white;
+  }
 }
-#content-container {
-  box-sizing: border-box;
+#placeholder {
   position: absolute;
   width: 8.5in;
   left: 50%;
   margin-left: -4.25in;
   height: 10in;
-  top: 0;
-  background-color: #f3f3f3 !important;
-  color: #080808;
+  text-align: center;
+  top: 100px;
+  background-color: #323232 !important;
+  color: #ffffff;
 }
-@media print {
-  #content-container {
-    background-color: white;
-  }
+#placeholder a:link {
+  text-decoration: underline;
+  color: #ffffff;
 }
-#content-container .content-left {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 33%;
-  display: inline-block;
-  text-align: right;
-}
-#content-container .content-left .section {
-  padding-right: 15px;
-  padding-left: 0;
-}
-#content-container .content-left .section > div {
-  background-color: #e7e7e7 !important;
-}
-#content-container .content-left #contact-info {
-  position: absolute;
-  top: 50%;
-  margin-top: -20px;
-  line-height: 20px;
-  right: 30px;
-  padding-top: 3px;
-  color: #082858;
-}
-#content-container .content-left .employment-entry .empIcon {
-  float: right;
-  height: 30px;
-  width: 30px;
-}
-#content-container .content-left .employment-entry .empIcon img {
-  height: 100%;
-  width: 100%;
-}
-#content-container .content-left .employment-entry > div {
-  padding-right: 35px;
-}
-#content-container .content-left .tech-entries {
-  padding-left: 30px;
-}
-#content-container .content-left .tech-entries.traits {
-  font-size: 10px;
-}
-#content-container .content-left .tech-entries .tech-entry {
-  position: relative;
-  padding-bottom: 2px;
-}
-#content-container .content-left .tech-entries .tech-entry .label {
-  position: relative;
-  width: 75px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-right: 1px solid gray;
-  text-align: left;
-  padding-left: 2px;
-  z-index: 5;
-  height: 15px;
-  color: black;
-}
-#content-container .content-left .tech-entries .tech-entry .barbg,
-#content-container .content-left .tech-entries .tech-entry .bar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 15px;
-}
-#content-container .content-left .tech-entries .tech-entry .barbg {
-  background-color: #fff !important;
-  width: 100%;
-}
-#content-container .content-left .tech-entries .tech-entry .bar {
-  background-color: #21ff7c !important;
-  z-index: 4;
-}
-#content-container .content-left .tech-entries-no-graph {
-  width: 100%;
-  text-align: justify;
-  padding-left: 30px;
-}
-#content-container .content-left .tech-entries-no-graph > div {
-  display: inline;
-}
-#content-container .content-left .tech-entries-no-graph > div:not(:last-child):after {
-  content: ",";
-}
-#content-container .content-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 33%;
-  right: 0;
-  display: inline-block;
-  background-color: #e7e7e7;
-  text-align: left;
-}
-#content-container .content-right .section {
-  padding-right: 0;
-  padding-left: 15px;
-}
-#content-container .content-right .section div {
-  background-color: #f3f3f3;
-  padding-right: 30px;
-}
-#content-container .content-right #name-container {
-  position: absolute;
-  top: 50%;
-  margin-top: -20px;
-  height: 60px;
-  left: 30px;
-  text-transform: uppercase;
-}
-#content-container .content-right #name-container #full-name {
-  font-size: 40px;
-  line-height: 40px;
-  font-weight: bold;
-  color: #082858;
-}
-#content-container .content-right #name-container #tag-line {
-  font-size: 20px;
-  line-height: 20px;
-  color: dimgray;
-}
-#content-container .page-header {
-  height: 120px;
-  position: relative;
-}
-#content-container .section {
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 0;
-}
-#content-container .section .header {
-  color: #082858;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-#content-container .section > div {
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 15px;
+#placeholder a:visited {
+  text-decoration: underline;
+  color: #efefef;
 }
